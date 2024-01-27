@@ -8,49 +8,49 @@ In this I have completed the basic implementation of getting stock price.
 First clone the github repository
 
 ```bash
-  git clone https://github.com/nmastepankaj/stock_price_view_application.git
+git clone https://github.com/nmastepankaj/stock_price_view_application.git
 ```
 
 Open the repository folder in any code editor (VS code) or open any terminal.
 Move to the backend folder and install all the requirements.
 
 ```bash
-  cd stock_data
+cd stock_price_view_application
 ```
 
 You need to create virtual environment for the project. If you don't have virtualenv the install it using the below command :-
 
 ```bash
-  virtualenv venv
+virtualenv venv
 ```
 
 Now, activate the virtual environment using the below command.
 If you're window user :-
 
 ```bash
-  ./venv/Scripts/activate
+./venv/Scripts/activate
 ```
 
 
 If you're linux user :-
 
 ```bash
-  source venv/bin/activate
+source venv/bin/activate
 ```
 
 
 install all the project requirements
 
 ```bash
-  pip install -r requirement.txt
+pip install -r requirement.txt
 ```
 
 If you are using the same databse present in the repository then no need to do the below steps
 Now, you need to create migrations and migrate all the migrations
 
 ```bash
-  python manage.py makemigrations
-  python manage.py migrate
+python manage.py makemigrations
+python manage.py migrate
 ```
 
 User: pankaj 
@@ -58,13 +58,13 @@ Passowrd: pankaj
 Create super user for your project
 
 ```bash
-  python manage.py createsuperuser
+python manage.py createsuperuser
 ```
 
 Run your project
 
 ```bash
-  python manage.py runserver
+python manage.py runserver
 ```
 
 Now your application is ready to use. First register a user and login with the provided credentials.
@@ -77,14 +77,14 @@ In this prject to get the bhavcopy of the stock data we need to run the function
 - A GET route for the top 10 stocks.
   curl for this route
 ```curl
-    curl --location 'http://127.0.0.1:8000/api/get_top10_stocks' \
+curl --location 'http://127.0.0.1:8000/api/get_top10_stocks' \
     --header 'Cookie: csrftoken=zauPe4jvWB4K7phC7871fNUDlXRdCP06mwBd3jhmkFdSJAhCGGcfaP5WaIBWkqM4'
 ```
 
 - A GET route to find stocks by name.
   curl for this api
 ```
-  curl --location 'http://127.0.0.1:8000/api/get_stock_by_name/IRFC' \
+curl --location 'http://127.0.0.1:8000/api/get_stock_by_name/IRFC' \
   --header 'Cookie: csrftoken=zauPe4jvWB4K7phC7871fNUDlXRdCP06mwBd3jhmkFdSJAhCGGcfaP5WaIBWkqM4'
 ```
 
